@@ -31,13 +31,11 @@
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.txtDatos = new System.Windows.Forms.TextBox();
             this.lblDistancia = new System.Windows.Forms.Label();
             this.barraDistancia = new System.Windows.Forms.ProgressBar();
             this.btnEncenderLaser = new System.Windows.Forms.Button();
             this.btnApagarLaser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,10 +55,11 @@
             this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConectar.Location = new System.Drawing.Point(15, 68);
             this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(75, 23);
+            this.btnConectar.Size = new System.Drawing.Size(89, 23);
             this.btnConectar.TabIndex = 2;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // btnDesconectar
             // 
@@ -74,6 +73,7 @@
             this.btnDesconectar.TabIndex = 3;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = false;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // lblEstado
             // 
@@ -85,17 +85,10 @@
             this.lblEstado.TabIndex = 4;
             this.lblEstado.Text = "Desconectado";
             // 
-            // txtDatos
-            // 
-            this.txtDatos.Location = new System.Drawing.Point(148, 116);
-            this.txtDatos.Name = "txtDatos";
-            this.txtDatos.Size = new System.Drawing.Size(121, 22);
-            this.txtDatos.TabIndex = 5;
-            // 
             // lblDistancia
             // 
             this.lblDistancia.AutoSize = true;
-            this.lblDistancia.Location = new System.Drawing.Point(206, 39);
+            this.lblDistancia.Location = new System.Drawing.Point(144, 89);
             this.lblDistancia.Name = "lblDistancia";
             this.lblDistancia.Size = new System.Drawing.Size(63, 16);
             this.lblDistancia.TabIndex = 6;
@@ -103,9 +96,9 @@
             // 
             // barraDistancia
             // 
-            this.barraDistancia.Location = new System.Drawing.Point(148, 58);
+            this.barraDistancia.Location = new System.Drawing.Point(12, 108);
             this.barraDistancia.Name = "barraDistancia";
-            this.barraDistancia.Size = new System.Drawing.Size(182, 23);
+            this.barraDistancia.Size = new System.Drawing.Size(333, 23);
             this.barraDistancia.TabIndex = 7;
             // 
             // btnEncenderLaser
@@ -119,6 +112,7 @@
             this.btnEncenderLaser.TabIndex = 8;
             this.btnEncenderLaser.Text = "Encender laser";
             this.btnEncenderLaser.UseVisualStyleBackColor = false;
+            this.btnEncenderLaser.Click += new System.EventHandler(this.btnEncenderLaser_Click);
             // 
             // btnApagarLaser
             // 
@@ -132,6 +126,7 @@
             this.btnApagarLaser.TabIndex = 9;
             this.btnApagarLaser.Text = "Apagar laser";
             this.btnApagarLaser.UseVisualStyleBackColor = false;
+            this.btnApagarLaser.Click += new System.EventHandler(this.btnApagarLaser_Click);
             // 
             // label1
             // 
@@ -140,15 +135,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Datos";
             // 
             // label4
             // 
@@ -177,9 +163,8 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(9, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 16);
+            this.label6.Size = new System.Drawing.Size(0, 16);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Distancia detectada: ";
             // 
             // label7
             // 
@@ -208,10 +193,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel2.Controls.Add(this.barraDistancia);
-            this.panel2.Controls.Add(this.txtDatos);
             this.panel2.Controls.Add(this.lblDistancia);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(413, 12);
             this.panel2.Name = "panel2";
@@ -256,13 +239,11 @@
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox txtDatos;
         private System.Windows.Forms.Label lblDistancia;
         private System.Windows.Forms.ProgressBar barraDistancia;
         private System.Windows.Forms.Button btnEncenderLaser;
         private System.Windows.Forms.Button btnApagarLaser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
