@@ -33,19 +33,15 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblDistancia = new System.Windows.Forms.Label();
             this.barraDistancia = new System.Windows.Forms.ProgressBar();
-            this.btnEncenderLaser = new System.Windows.Forms.Button();
-            this.btnApagarLaser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConectar
@@ -101,33 +97,6 @@
             this.barraDistancia.Size = new System.Drawing.Size(333, 23);
             this.barraDistancia.TabIndex = 7;
             // 
-            // btnEncenderLaser
-            // 
-            this.btnEncenderLaser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEncenderLaser.FlatAppearance.BorderSize = 0;
-            this.btnEncenderLaser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncenderLaser.Location = new System.Drawing.Point(232, 52);
-            this.btnEncenderLaser.Name = "btnEncenderLaser";
-            this.btnEncenderLaser.Size = new System.Drawing.Size(161, 31);
-            this.btnEncenderLaser.TabIndex = 8;
-            this.btnEncenderLaser.Text = "Encender laser";
-            this.btnEncenderLaser.UseVisualStyleBackColor = false;
-            this.btnEncenderLaser.Click += new System.EventHandler(this.btnEncenderLaser_Click);
-            // 
-            // btnApagarLaser
-            // 
-            this.btnApagarLaser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnApagarLaser.FlatAppearance.BorderSize = 0;
-            this.btnApagarLaser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApagarLaser.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnApagarLaser.Location = new System.Drawing.Point(7, 52);
-            this.btnApagarLaser.Name = "btnApagarLaser";
-            this.btnApagarLaser.Size = new System.Drawing.Size(168, 31);
-            this.btnApagarLaser.TabIndex = 9;
-            this.btnApagarLaser.Text = "Apagar laser";
-            this.btnApagarLaser.UseVisualStyleBackColor = false;
-            this.btnApagarLaser.Click += new System.EventHandler(this.btnApagarLaser_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -140,7 +109,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 8);
+            this.label4.Location = new System.Drawing.Point(59, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 25);
             this.label4.TabIndex = 13;
@@ -166,16 +135,6 @@
             this.label6.Size = new System.Drawing.Size(0, 16);
             this.label6.TabIndex = 15;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(137, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 25);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Control Manual";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -184,9 +143,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblEstado);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(56, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 227);
+            this.panel1.Size = new System.Drawing.Size(282, 227);
             this.panel1.TabIndex = 17;
             // 
             // panel2
@@ -196,22 +155,21 @@
             this.panel2.Controls.Add(this.lblDistancia);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(413, 12);
+            this.panel2.Location = new System.Drawing.Point(414, 78);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(361, 227);
             this.panel2.TabIndex = 18;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel3
+            // label2
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.btnEncenderLaser);
-            this.panel3.Controls.Add(this.btnApagarLaser);
-            this.panel3.Location = new System.Drawing.Point(175, 312);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(412, 100);
-            this.panel3.TabIndex = 19;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(328, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 25);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Conexion Serial";
             // 
             // Form1
             // 
@@ -219,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -229,9 +187,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -241,16 +198,13 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblDistancia;
         private System.Windows.Forms.ProgressBar barraDistancia;
-        private System.Windows.Forms.Button btnEncenderLaser;
-        private System.Windows.Forms.Button btnApagarLaser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -29,7 +29,7 @@ namespace ProyectoProgramacion
 
             ArduinoPort = new SerialPort
             {
-                PortName = "COM7", 
+                PortName = "COM7",
                 BaudRate = 9600,
                 DataBits = 8,
                 ReadTimeout = 500,
@@ -78,13 +78,10 @@ namespace ProyectoProgramacion
         {
             try
             {
-
                 string data = ArduinoPort.ReadLine();
-
 
                 this.Invoke(new Action(() =>
                 {
-
                     if (data.Contains("Distance"))
                     {
                         string[] partes = data.Split(' ');
@@ -105,7 +102,7 @@ namespace ProyectoProgramacion
                                     {
                                         comando.Parameters.AddWithValue("@distancia", distancia);
                                         comando.Parameters.AddWithValue("@detectado", distancia < 100);
-                                        comando.Parameters.AddWithValue("@respuesta", distancia < 100 ? "Laser" : "Ninguno");
+                                        comando.Parameters.AddWithValue("@respuesta", distancia < 100 ? "LED encendido" : "LED apagado");
                                         comando.ExecuteNonQuery();
                                     }
                                 }
@@ -120,7 +117,7 @@ namespace ProyectoProgramacion
             }
             catch
             {
-               
+                // Evitamos errores si se corta la lectura
             }
         }
 
@@ -139,17 +136,6 @@ namespace ProyectoProgramacion
             }
         }
 
-        private void btnEncenderLaser_Click(object sender, EventArgs e)
-        {
-            if (ArduinoPort != null && ArduinoPort.IsOpen)
-                ArduinoPort.Write("L"); //Encender laser
-        }
-
-        private void btnApagarLaser_Click(object sender, EventArgs e)
-        {
-            if (ArduinoPort != null && ArduinoPort.IsOpen)
-                ArduinoPort.Write("l"); //Apagar laser
-        }
         private void label4_Click(object sender, EventArgs e) { }
 
         private void panel2_Paint(object sender, PaintEventArgs e) { }
