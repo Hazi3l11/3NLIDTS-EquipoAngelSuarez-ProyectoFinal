@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -45,12 +46,13 @@
             // 
             // btnConectar
             // 
-            this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnConectar.FlatAppearance.BorderSize = 0;
             this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConectar.Location = new System.Drawing.Point(15, 68);
+            this.btnConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConectar.Location = new System.Drawing.Point(114, 84);
             this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(89, 23);
+            this.btnConectar.Size = new System.Drawing.Size(129, 38);
             this.btnConectar.TabIndex = 2;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
@@ -58,13 +60,14 @@
             // 
             // btnDesconectar
             // 
-            this.btnDesconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDesconectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDesconectar.FlatAppearance.BorderSize = 0;
             this.btnDesconectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesconectar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDesconectar.Location = new System.Drawing.Point(152, 68);
+            this.btnDesconectar.Location = new System.Drawing.Point(114, 128);
             this.btnDesconectar.Name = "btnDesconectar";
-            this.btnDesconectar.Size = new System.Drawing.Size(118, 23);
+            this.btnDesconectar.Size = new System.Drawing.Size(129, 36);
             this.btnDesconectar.TabIndex = 3;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = false;
@@ -73,8 +76,9 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblEstado.Location = new System.Drawing.Point(72, 136);
+            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lblEstado.Location = new System.Drawing.Point(129, 196);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(96, 16);
             this.lblEstado.TabIndex = 4;
@@ -83,15 +87,19 @@
             // lblDistancia
             // 
             this.lblDistancia.AutoSize = true;
-            this.lblDistancia.Location = new System.Drawing.Point(144, 89);
+            this.lblDistancia.BackColor = System.Drawing.Color.Transparent;
+            this.lblDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistancia.ForeColor = System.Drawing.Color.Aqua;
+            this.lblDistancia.Location = new System.Drawing.Point(166, 96);
             this.lblDistancia.Name = "lblDistancia";
-            this.lblDistancia.Size = new System.Drawing.Size(63, 16);
+            this.lblDistancia.Size = new System.Drawing.Size(80, 20);
             this.lblDistancia.TabIndex = 6;
             this.lblDistancia.Text = "Distancia";
             // 
             // barraDistancia
             // 
-            this.barraDistancia.Location = new System.Drawing.Point(12, 108);
+            this.barraDistancia.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.barraDistancia.Location = new System.Drawing.Point(33, 119);
             this.barraDistancia.Name = "barraDistancia";
             this.barraDistancia.Size = new System.Drawing.Size(333, 23);
             this.barraDistancia.TabIndex = 7;
@@ -107,10 +115,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 16);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Mudir MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(74, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 25);
+            this.label4.Size = new System.Drawing.Size(204, 36);
             this.label4.TabIndex = 13;
             this.label4.Text = "Conexion Serial";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -118,10 +128,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(93, 8);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Mudir MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(92, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 25);
+            this.label5.Size = new System.Drawing.Size(237, 36);
             this.label5.TabIndex = 14;
             this.label5.Text = "Lectura del Sensor";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -136,27 +148,32 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.BackgroundImage = global::ProyectoProgramacion.Properties.Resources.fondopanel111;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.btnConectar);
             this.panel1.Controls.Add(this.btnDesconectar);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblEstado);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(56, 70);
+            this.panel1.Location = new System.Drawing.Point(12, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 227);
+            this.panel1.Size = new System.Drawing.Size(350, 263);
             this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel2.BackgroundImage = global::ProyectoProgramacion.Properties.Resources.fondopanel111;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.barraDistancia);
             this.panel2.Controls.Add(this.lblDistancia);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(414, 78);
+            this.panel2.Location = new System.Drawing.Point(395, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(361, 227);
+            this.panel2.Size = new System.Drawing.Size(393, 257);
             this.panel2.TabIndex = 18;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -164,7 +181,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
